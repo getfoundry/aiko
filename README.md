@@ -56,6 +56,15 @@ for await (const delta of aiko.chatStream({
 | `AIKO_API_KEY` | — | bearer token (optional for public endpoints) |
 | `AIKO_MODEL` | `aiko-default` | default model alias |
 
+## Authentication
+
+The `/v1/chat/completions` endpoint requires a bearer token. Two paths:
+
+- Subscription at <https://aiko.unbrowse.ai>
+- One-shot x402 credit via `POST https://aiko-api.getfoundry.app/credit` (atomic per-request settlement)
+
+The `/v1/models` endpoint is open.
+
 ## API shape
 
 OpenAI-compatible: same `messages`, `model`, `temperature`, `max_tokens`, `stream`, etc.

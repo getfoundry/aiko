@@ -1,0 +1,38 @@
+{
+  "name": "@getfoundry/aiko",
+  "version": "0.1.0",
+  "description": "Aiko — a thin OpenAI-compatible client for the Aiko API.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./src/index.js"
+  },
+  "bin": {
+    "aiko": "./bin/aiko.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/",
+    "prepublishOnly": "node -e \"console.log('publishing', require('./package.json').name, require('./package.json').version)\""
+  },
+  "keywords": ["aiko", "llm", "openai-compatible", "chat", "foundry"],
+  "homepage": "https://aiko.getfoundry.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getfoundry/aiko.git"
+  },
+  "bugs": {
+    "url": "https://github.com/getfoundry/aiko/issues"
+  },
+  "license": "MIT",
+  "author": "Foundry <lewis@getfoundry.app>"
+}
